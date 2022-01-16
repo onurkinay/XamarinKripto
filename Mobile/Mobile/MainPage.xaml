@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.MainPage">
+
+    <StackLayout> 
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            
+            <Label Text="Kripto Portfolyo" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame> 
+        <Label x:Name="txtMiktar" Text="Toplam TRY" FontSize="Title" Padding="30,10,30,10" />
+        <Label x:Name="txtFark" Text="Toplam Fark" FontSize="Body" Padding="30,10,30,10" />
+        <Grid>
+            
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <ActivityIndicator IsRunning="true" x:Name="loading" />
+                <Label x:Name="txtDurum" IsVisible="true"  FontFamily="OpenSans-Light"  FontSize="15" Text="Portfolyo hesaplanıyor. Lütfen bekleyiniz..." />
+            </StackLayout>
+         
+            <ListView x:Name="lbKriptolar"  
+            ItemsSource="{Binding Kriptolar}" IsPullToRefreshEnabled="false" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="0,0,0,3">
+                                <Frame.Content>
+                                    <Frame Padding="15,15,15,15"   OutlineColor="Gray" BackgroundColor="{Binding Renk}">
+                                        <Frame.Content>
+                                            <StackLayout Padding="0,0,0,0"  Orientation="Vertical" HorizontalOptions="Fill">
+                                                <Label  FontFamily="OpenSans-Light"  FontSize="15" TextColor="White">
+                                                    <Label.Text>
+                                                        <MultiBinding  StringFormat="{}{0} {1}">
+                                                            <Binding Path="Adi"/>
+                                                            <Binding Path="ToplamKripto"/>
+                                                        </MultiBinding>
+                                                    </Label.Text>
+                                                </Label>
+                                                <Label Text="{Binding AnlikFiyat, StringFormat='₺{0}'}" FontFamily="OpenSans-Light"  FontSize="15" TextColor="White"/>
+
+                                                <Label Text="{Binding Fark}" FontFamily="OpenSans-Light"  FontSize="15" TextColor="White"/>
+                                            </StackLayout>
+                                        </Frame.Content>
+                                    </Frame>
+                                </Frame.Content>
+
+                            </Frame>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate> 
+            </ListView>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

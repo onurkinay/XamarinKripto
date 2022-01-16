@@ -1,0 +1,68 @@
+﻿<Window x:Class="ProfitAndLoss.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfitAndLoss"
+        mc:Ignorable="d"
+        Title="Kripto Takip Programı" Height="617" Width="800" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <DataTemplate x:Key="bilgi_kripto_zarar">
+            <StackPanel Background="Red" Tag="zarar">
+                <Border Padding="5">
+                    <StackPanel>
+                      
+                            <TextBlock FontSize="10" Foreground="White">
+                                <TextBlock.Text>
+                                    <MultiBinding  StringFormat="{}{0} {1}">
+                                        <Binding Path="Content.Adi"/>
+                                        <Binding Path="Content.ToplamKripto"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Content.AnlikFiyat, StringFormat={}₺{0}}" Foreground="White"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Content.Fark}" Foreground="White" />
+                     
+                    </StackPanel>
+
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="bilgi_kripto_kar">
+            <StackPanel Background="Green" Tag="kar">
+                <Border Padding="5">
+                    <StackPanel>
+                        <TextBlock FontSize="10" Foreground="White">
+                            <TextBlock.Text>
+                                <MultiBinding  StringFormat="{}{0} {1}">
+                                    <Binding Path="Content.Adi"/>
+                                    <Binding Path="Content.ToplamKripto"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Content.AnlikFiyat, StringFormat={}₺{0}}" Foreground="White"/>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Content.Fark}" Foreground="White" />
+                    </StackPanel>
+
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+        <local:KriptoSelector x:Key="KriptoTemplate" />
+    </Window.Resources>
+    <Grid>
+        <ListView  ScrollViewer.CanContentScroll="False" x:Name="lbKriptolar" Height="473" VerticalAlignment="Top"  ItemTemplateSelector="{StaticResource KriptoTemplate}" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="10,87,10,0" MouseDoubleClick="lbKriptolar_MouseDoubleClick">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <TextBlock x:Name="txtMiktar" HorizontalAlignment="Left" Margin="295,28,0,0" TextWrapping="Wrap" Text="Toplam TRY" VerticalAlignment="Top"/>
+        <Button Content="Excel Aç" x:Name="ExcelAc" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="31" Width="116" Click="Button_Click"/>
+        <Button x:Name="Yenile" Content="Oto Yenileme AÇIK" IsEnabled="False" HorizontalAlignment="Left" Margin="138,28,0,0" VerticalAlignment="Top" Height="31" Width="152" Click="Yenile_Click"/>
+        <local:LoadingControl x:Name="loading" Diameter="100" Color1="Blue" Color2="Transparent" Visibility="Hidden"/>
+        <TextBlock x:Name="txtFark" HorizontalAlignment="Left" Margin="295,49,0,0" TextWrapping="Wrap" Text="Toplam TRY" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

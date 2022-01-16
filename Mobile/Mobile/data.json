@@ -1,0 +1,103 @@
+﻿{
+  "sheet": [
+    {
+      "Tarih": "01-04 11:15:13",
+      "Çift": "MANA/TRY",
+      "Taraf": "Al",
+      "Fiyat": "43.19",
+      "Gerçekleşti": "9.2",
+      "İşlem Ücretleri": "0.0092 MANA",
+      "Toplam": "397.348 TRY"
+    },
+    {
+      "Tarih": "12-09 19:34:15",
+      "Çift": "MATIC/TRY",
+      "Taraf": "Al",
+      "Fiyat": "31",
+      "Gerçekleşti": "2.9",
+      "İşlem Ücretleri": "0.0029 MATIC",
+      "Toplam": "89.9 TRY"
+    },
+    {
+      "Tarih": "12-04 13:36:38",
+      "Çift": "ENJ/TRY",
+      "Taraf": "Al",
+      "Fiyat": "38",
+      "Gerçekleşti": "1.86",
+      "İşlem Ücretleri": "0.00186 ENJ",
+      "Toplam": "70.68 TRY"
+    },
+    {
+      "Tarih": "12-04 09:56:15",
+      "Çift": "HOT/TRY",
+      "Taraf": "Al",
+      "Fiyat": "0.13",
+      "Gerçekleşti": "244",
+      "İşlem Ücretleri": "0.244 HOT",
+      "Toplam": "31.72 TRY"
+    },
+    {
+      "Tarih": "12-02 11:19:51",
+      "Çift": "MANA/TRY",
+      "Taraf": "Al",
+      "Fiyat": "59.95",
+      "Gerçekleşti": "0.5",
+      "İşlem Ücretleri": "0.0005 MANA",
+      "Toplam": "29.975 TRY"
+    },
+    {
+      "Tarih": "12-02 11:19:44",
+      "Çift": "MANA/TRY",
+      "Taraf": "Al",
+      "Fiyat": "59.95",
+      "Gerçekleşti": "4.5",
+      "İşlem Ücretleri": "0.0045 MANA",
+      "Toplam": "269.775 TRY"
+    },
+    {
+      "Tarih": "12-02 11:19:16",
+      "Çift": "SAND/TRY",
+      "Taraf": "Al",
+      "Fiyat": "85.79",
+      "Gerçekleşti": "3.5",
+      "İşlem Ücretleri": "0.0035 SAND",
+      "Toplam": "300.265 TRY"
+    },
+    {
+      "Tarih": "11-27 20:08:33",
+      "Çift": "MANA/TRY",
+      "Taraf": "Al",
+      "Fiyat": "60.99",
+      "Gerçekleşti": "1.6",
+      "İşlem Ücretleri": "0.0016 MANA",
+      "Toplam": "97.584 TRY"
+    },
+    {
+      "Tarih": "",
+      "Çift": "KEEP/TRY",
+      "Taraf": "Al",
+      "Fiyat": "7.978",
+      "Gerçekleşti": "12",
+      "İşlem Ücretleri": "0.0016 KEEP",
+      "Toplam": "95.73 TRY"
+    },
+    {
+      "Tarih": "",
+      "Çift": "GRT/TRY",
+      "Taraf": "Al",
+      "Fiyat": "9.92",
+      "Gerçekleşti": "10",
+      "İşlem Ücretleri": "0.0016 KEEP",
+      "Toplam": "99.20 TRY"
+    },
+    {
+      "Tarih": "",
+      "Çift": "DOGE/TRY",
+      "Taraf": "Al",
+      "Fiyat": "2.5185",
+      "Gerçekleşti": "9",
+      "İşlem Ücretleri": "0.0016 KEEP",
+      "Toplam": "22.66 TRY"
+    }
+  ]
+}
