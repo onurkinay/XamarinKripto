@@ -12,9 +12,7 @@ using Xamarin.Essentials;
 namespace Mobile
 {
     public partial class MainPage : ContentPage
-    {
-        double yaklasikToplamTRY = 0;
-        double yaklasikToplamFark = 0;
+    { 
         JsonOps json;
         bool _isRunning = false;
         ObservableCollection<Kripto> ListKriptolar = new ObservableCollection<Kripto>();
@@ -42,7 +40,6 @@ namespace Mobile
             {
                 if (_isRunning)
                     Task.Run(asyncRun);
-
                 return true;
             });
 
@@ -86,8 +83,8 @@ namespace Mobile
             Dictionary<string, object> list = new Dictionary<string, object>();
             List<Kripto> kriptoListesi = new List<Kripto>();
 
-            yaklasikToplamTRY = 0;
-            yaklasikToplamFark = 0;
+            double yaklasikToplamTRY = 0;
+            double yaklasikToplamFark = 0;
 
             Calculate kriptolar = new Calculate(json.liste);
             if (kriptolar.getCurrency("BTCTRY") == -1) return null;
