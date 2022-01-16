@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile.MainPage">
 
-    <StackLayout> 
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+    <StackLayout>
+        <Frame BackgroundColor="#FFC20B" Padding="24" CornerRadius="0">
             
             <Label Text="Kripto Portfolyo" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame> 
